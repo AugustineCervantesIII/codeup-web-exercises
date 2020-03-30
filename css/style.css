@@ -1,0 +1,37 @@
+.fancy-header {
+    text-align: center;
+    color: black; /* single line comment */
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration:underline ;
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/260689/pexels-photo-260689.jpeg?cs=srgb&dl=black-and-white-board-boardroom-business-260689.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachement: fixed;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+ul {
+    list-style-type: upper-alpha;
+}
+
+* {
+    font-family: Arial;
+    color: black;
+}
+
+td {
+    padding: 5px
+}
+
+tr {
+    padding: 15px;
+}
