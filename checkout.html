@@ -5,32 +5,26 @@
     <title>Checkout</title>
 </head>
 <body>
-<p>
-<p>
 <h1>Checkout</h1>
 <form method="POST" action="http://request-inspector.glitch.me/">
-    </p>
-    <p>
     <div>
         <label for="name">Full Name</label>
         <input id="name" name="name" type="text" placeholder="Name" autofocus="autofocus" size="50" required>
     </div>
-    </p>
-    <p>
+    <br>
     <div>
         <label for="name_on_card">Name on Card</label>
         <input id="name_on_card" name="name_on_card" type="text" placeholder="Name on card" maxlength="20" size="40"
                required>
     </div>
-    </p>
-    <p>
+    <br>
     <div>
         <label for="card_number">Card Number</label>
         <input id="card_number" name="card_number" type="text" pattern="[0-9]{16}" placeholder="16-digit card number"
                size="41"
                required>
     </div>
-    </p>
+    <br>
     <p>Expiration Date:</p>
     <div>
         <label for="exp_date">Month</label>
@@ -62,22 +56,19 @@
             <option value="2029">2029</option>
         </select>
     </div>
-    <p>
+    <br>
     <div>
         <label for="security_code">Security Code</label>
         <input id="security_code" name="security code" type="text" placeholder="000" size="4" required>
     </div>
-    </p>
-    <p>
+    <br>
     <h3>Billing Address</h3>
-    </p>
-    <p>
+    <br>
     <div>
         <label for="street">Street Address</label>
         <input id="street" name="street" type="text" placeholder="Address" size="40" required>
     </div>
-    </p>
-    <p>
+    <br>
         <label for="city">City</label>
         <input id="city" name="city" type="text" placeholder="City" size="40" required>
         <label for="state">State</label>
@@ -134,17 +125,16 @@
             <option value="Wisconsin">Wisconsin, WI</option>
             <option value="Wyoming">Wyoming, WY</option>
         </select>
-    </P>
-    <p>
+    <br>
+    <br>
     <div>
         <label for="zip">Zip code</label>
         <input id="zip" type="text" pattern="[0-9]{5}" placeholder="Zip code" required>
     </div>
-    </p>
-    <p>
+    <br>
         <label for="keep_card_on_file">Keep this card on file for future transactions?</label>
         <input id="keep_card_on_file" type="checkbox" name="keep_card_on_file">
-    </p>
+    <br>
     <button type="submit">Buy Now!</button>
 </form>
 </body>
