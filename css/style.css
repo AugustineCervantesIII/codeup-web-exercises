@@ -1,6 +1,6 @@
 .fancy-header {
     text-align: center;
-    color: black; /* single line comment */
+    color: white; /* single line comment */
     text-decoration: underline;
 }
 
@@ -9,10 +9,10 @@ h1 {
 }
 
 body {
-    background-image: url("https://images.pexels.com/photos/260689/pexels-photo-260689.jpeg?cs=srgb&dl=black-and-white-board-boardroom-business-260689.jpg&fm=jpg");
+    background-image: url("https://images.pexels.com/photos/1102797/pexels-photo-1102797.png?cs=srgb&dl=codes-computer-monitor-programming-1102797.jpg&fm=jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachement: fixed;
+    background-position: left;
+    background-size: cover;
 }
 
 ol {
@@ -24,14 +24,24 @@ ul {
 }
 
 * {
-    font-family: Arial;
-    color: black;
+    font-family: "Microsoft Tai Le";
+    color: white;
 }
 
-td {
-    padding: 5px
+td, tr {
+    padding: 5px;
+    font-size: larger;
+    font-family: "Lucida Fax"
 }
 
-tr {
-    padding: 15px;
+a:link {
+    color: white;
+}
+
+a:hover {
+    color: dodgerblue;
+}
+
+a:visited {
+    color: lightpink;
 }
