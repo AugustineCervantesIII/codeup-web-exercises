@@ -20,7 +20,7 @@ ol {
 }
 
 ul {
-    list-style-type: upper-alpha;
+    list-style-type: lower-roman;
 }
 
 * {
