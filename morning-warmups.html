@@ -22,6 +22,21 @@ function eightCharactersLong(str){
 
     console.log(eightCharactersLong("cat")); // false
     console.log(eightCharactersLong("augustinecervantes")) //true
+
+    function twoMoreAwayFromZero(num){
+        if (num >= 0) {
+            return num + 2;
+        } else {
+            return num -2;
+        }
+    }
+
+    console.log(twoMoreAwayFromZero(2)); // return 4
+    console.log(twoMoreAwayFromZero(0)); // return 2
+    console.log(twoMoreAwayFromZero(0.5)); // return 2.5
+    console.log(twoMoreAwayFromZero(-2)); // return -4
+    console.log(twoMoreAwayFromZero(-3.5)); // return -5.5
+
 </script>
 </body>
 </html>
