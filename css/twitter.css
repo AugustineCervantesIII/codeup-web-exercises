@@ -30,6 +30,7 @@ a {
     background: var(--light-bg);
     width: 100%;
     z-index: 1;
+    position: fixed;
 }
 
 .nav-item {
