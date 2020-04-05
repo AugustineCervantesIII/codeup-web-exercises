@@ -38,13 +38,14 @@ li {
 }
 
 nav a:hover {
-    background: blue;
+    color: blue;
 }
 
 nav ul li:nth-child(5) {
     margin: auto;
     padding-top: .2em;
     padding-bottom: .2em;
+
 }
 
 nav ul li:nth-child(6) {
