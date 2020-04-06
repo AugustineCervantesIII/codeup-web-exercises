@@ -1,54 +1,55 @@
-/* * {
+* {
     box-sizing: border-box;
-    font-weight: bold;
-    font-size: 15px;
-    align-items: center;
+    /*font-size: 15px;*/
 }
-*/
+
 
 body {
     margin: 0;
 
 }
+
 nav {
     background: rgb(193, 193, 193);
 }
+
 ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: auto;
     display: flex;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Work Sans', sans-serif;
-    box-sizing: border-box;
+    font-family: 'Montserrat', 'Work Sans', sans-serif;
     font-weight: bold;
     align-items: center;
+    /*box-sizing: border-box;*/
+    height: 3em;
+    width: auto;
+
 }
+
 nav a {
     display: inline-block;
     text-decoration: none;
     color: black;
     padding: .5em;
     margin-left: auto;
-    font-size: 12px;
+    font-size: .65em;
 }
 
-li {
-    margin: 0;
-}
 
 nav a:hover {
     color: blue;
 }
 
 nav ul li:nth-child(5) {
-    margin: auto;
+
     padding-top: .2em;
     padding-bottom: .2em;
+    font-weight: lighter;
+    font-size: 3em;
+    margin-left: 12.5em;
+    margin-right: auto;
 
-}
 
-nav ul li:nth-child(6) {
-    margin-left: auto;
 }
 
