@@ -49,11 +49,17 @@ function eightCharactersLong(str){
 
     console.log(returnsTheNumberSeven);
 
-    function isEven(num){
+    function isEvenNum(num){
         return num % 2 === 0;
     }
 
-
+function returnEvenOddMessage(num){
+    if (isEvenNum(num)) {
+        return "is even";
+    } else {
+        return "is odd";
+    }
+}
 
 </script>
 </body>
