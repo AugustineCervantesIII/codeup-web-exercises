@@ -25,35 +25,35 @@ main div {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-lines: none;
+
 }
 
 .one {
     grid-area: 1/1/1/9;
-    background: #ffd702;
+    background: #9bcd32;
     color: black;
 }
 
 .two {
-    grid-area: 2/1/9/3;
-    background: #ffd702;
+    grid-area: 2/1/8/3;
+    background: #9bcd32;
     color: black;
 }
 
 .three {
-    grid-area: 2/3/8/8;
-    background: #ffd702;
+    grid-area: 2/3/7/9;
+    background: #9bcd32;
     color: black;
 }
 
 .four {
     color: black;
-    grid-area: 2/9/8/8;
-    background: #ffd702;
+    grid-area: 7/3/8/9;
+    background: #9bcd32;
 }
 
 .five {
     color: black;
-    grid-area: 9/3/8/9;
-    background: #ffd702;
+    grid-area: 9/1/8/9;
+    background: #9bcd32;
 }
