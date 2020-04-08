@@ -1,0 +1,58 @@
+* {
+
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+main {
+    grid-gap: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: white;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+main div {
+    font-size: 2em;
+    color: white;
+    background: grey;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-lines: none;
+}
+
+.one {
+    grid-area: 1/1/1/9;
+    background: #ffd702;
+    color: black;
+}
+
+.two {
+    grid-area: 2/1/9/3;
+    background: #ffd702;
+    color: black;
+}
+
+.three {
+    grid-area: 2/3/8/8;
+    background: #ffd702;
+    color: black;
+}
+
+.four {
+    color: black;
+    grid-area: 2/9/8/8;
+    background: #ffd702;
+}
+
+.five {
+    color: black;
+    grid-area: 9/3/8/9;
+    background: #ffd702;
