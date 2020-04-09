@@ -1,0 +1,12 @@
+.jumbotron-fluid {
+    background-image: url("../img/pizza.png");
+    display:flex;
+    justify-content: stretch;
+
+}
+
+
+h1 {
+    background: white; opacity: .6;
+    text-align: center;
+}
