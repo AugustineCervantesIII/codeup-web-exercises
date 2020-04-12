@@ -26,7 +26,7 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
             </li>
             <li>
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search store near you!</button>
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search stores near you!</button>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -46,66 +46,31 @@
     </main>
 </div>
 <h2>Build Your Own Pizza!</h2>
+
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" id="crust-tab" data-toggle="tab" href="#crust" role="tab"><span class="badge badge-pill badge-secondary">1</span>Size & Crust</a>
+        <a class="nav-link active" id="crust-tab" data-toggle="tab" href="#crust" role="tab" aria-controls="crust" aria-selected="true">Size & Crust</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="sauce-tab" data-toggle="tab" href="#sauce"><span class="badge badge-pill badge-secondary">2</span>Cheese & Sauce</a>
+        <a class="nav-link" id="sauce-tab" data-toggle="tab" href="#sauce" role="tab" aria-controls="sauce" aria-selected="false">Cheese & Sauce</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+        <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false">Toppingds</a>
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
     <!-- tab1 -->
-    <form action="">
+    <div class="tab-pane fade show active" id="crust" role="tabpanel" aria-labelledby="crust-tab">
 
-    <div class="tab-pane fade show active" id="crust" role="tabpanel" aria-labelledby="crust-tab"></div>
-    <div class="card">
-
-        <div class="card-header bg-primary text-white">
-            Choose Size & Crust
-        </div>
-
-        <div class="card-body">
-            <div class="card">
-                <div class="card-header">
-                    Hand Tossed
-                </div>
-            <div class="card-body">
-            <div class="header">Garlic seasoned crust with a rich, buttery taste.</div>
-            </div>
-            </div>
-            <ul class="list-group">
-                <li class="list-group-item">Small (10")</li>
-                <li class="list-group-item">Medium (12")</li>
-            </ul>
-
-            <div class="card">
-                <div class="card-header">
-                    Crispy Thin
-                </div>
-            <div class="card-body">
-                <div class="header">Thin enough for optimum crisply to crunchy ratio.</div>
-            </div>
-            </div>
-            <ul class="list-group">
-                <li class="list-group-item">Medium (12")</li>
-                <li class="list-group-item">Large (14")</li>
-            </ul>
-        <div class="card-footer d-flex justify-content-end">
-            <button type="button" class="btn btn-primary" >Next Step<i class="fas fa-chevron-right"></i></button>
-        </div>
     </div>
+
     <!-- tab2 -->
-    <div class="tab-pane fade" id="sauce" role="tabpanel" aria-labelledby="sauce-tab">sauce</div>
+    <div class="tab-pane fade" id="sauce" role="tabpanel" aria-labelledby="sauce-tab"></div>
 
     <!-- tab3 -->
-    <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">topping</div>
+    <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab"></div>
 
 </div>
-    </form>
 
 
 <script src="https://kit.fontawesome.com/3963957e1d.js" crossorigin="anonymous"></script>
