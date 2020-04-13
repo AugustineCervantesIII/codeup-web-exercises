@@ -47,7 +47,7 @@
         <header><h1 class="display-4">Welcome to Pizza World!</h1></header>
     </main>
 </div>
-<h2>Build Your Own Pizza!</h2>
+<h2>Build your own pizza!</h2>
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
@@ -63,8 +63,8 @@
            aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
     </li>
 </ul>
+    <form action="" method="POST">
 <div class="tab-content" id="myTabContent">
-    <form action="" method="POST"></form>
 
     <!-- tab1 -->
     <div class="tab-pane fade show active" id="crust" role="tabpanel" aria-labelledby="crust-tab">
@@ -81,8 +81,14 @@
                         Garlic seasoned crust with rich, buttery taste.
                     </div>
                     <ul class="list-group">
-                        <li class="list-group-item">Small (10")</li>
-                        <li class="list-group-item">Medium (12")</li>
+                        <li class="list-group-item">
+                            <input type="radio" name="crust" id="ht-sm">
+                            <label for="ht-sm">Small (10")</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input type="radio" name="crust" id="ht-md">
+                            <label for="ht-md">Medium (12")</label>
+                        </li>
                     </ul>
                 </div>
                 <div class="card">
@@ -93,8 +99,14 @@
                         Thin enough for optimum crispy to crunchy ratio.
                     </div>
                     <ul class="list-group">
-                        <li class="list-group-item">Medium (12")</li>
-                        <li class="list-group-item">Large (14")</li>
+                        <li class="list-group-item">
+                            <input type="radio" name="crust" id="medium12">
+                            <label for="medium12">Medium (12")</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input type="radio" name="crust" id="large">
+                            <label for="large">Large (14")</label>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -110,6 +122,55 @@
             <div class="card-header bg-primary text-white">
                 Choose cheese & sauce
             </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        Cheese
+                    </div>
+                    <div class="card-body">
+                        How much?
+                        <div class="form-group">
+                            <label for="cheese"></label>
+                            <select class="form-control" id="cheese">
+                                <option>Light</option>
+                                <option>Normal</option>
+                                <option>Extra</option>
+                                <option>Double</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        Sauce
+                    </div>
+                    <div class="card-body">
+                        What Type?
+                        <div class="form-group">
+                            <label for="sauce-type"></label>
+                            <select class="form-control" id="sauce-type">
+                                <option>Tomato sauce</option>
+                                <option>Marinara sauce</option>
+                                <option>BBQ sauce</option>
+                                <option>Alfredo sauce</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body border-top">
+                        How much?
+                        <div class="form-group">
+                            <label for="sauce-amount"></label>
+                            <select class="form-control" id="sauce-amount">
+                                <option>Light</option>
+                                <option>Normal</option>
+                                <option>Extra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card-footer d-flex justify-content-end">
                 <button type="button" class="btn btn-primary"><i class="fas fa-chevron-left"></i>Previous Step</button>
                 <button type="button" class="btn btn-primary">Next Step<i class="fas fa-chevron-right"></i></button>
@@ -123,13 +184,68 @@
             <div class="card-header bg-primary text-white">
                 Choose toppings
             </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        Choose Meats
+                    </div>
+                        <ul class="list-group">
+                            <!-- <li class="list-group-item">
+                            <input type="radio" name="crust" id="ht-sm">
+                            <label for="ht-sm">Small (10")</label>
+                        </li> -->
+                            <li class="list-group-item">
+                                <input type="checkbox" name="beef" id="topping1">
+                                <label for="topping1">Beef</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" name="ham" id="topping2">
+                                <label for="topping2">Ham</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" name="ps" id="topping3">
+                                <label for="topping3">Philly Steak</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input type="checkbox" name="bacon" id="topping4">
+                                <label for="topping4">Bacon</label>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                    Choose Non-Meats
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <input type="checkbox" name="gp" id="topping5">
+                        <label for="topping5">Green Peppers</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="mushroom" id="topping6">
+                        <label for="topping6">Mushrooms</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="onion" id="topping7">
+                        <label for="topping7">Onions</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="jp" id="topping8">
+                        <label for="topping8">Jalepeño Peppers</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
             <div class="card-footer d-flex justify-content-end">
                 <button type="button" class="btn btn-primary">Checkout<i class="fas fa-shopping-cart"></i></button>
             </div>
         </div>
     </div>
 </div>
-
+    </form>
 
 <script src="https://kit.fontawesome.com/3963957e1d.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
