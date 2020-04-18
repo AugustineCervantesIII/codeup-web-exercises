@@ -101,6 +101,140 @@ function largerNumber(num1, num2){
     17 true
     18 true
 
+    var a = 1; 1
+    var b = a++; 1
+    var c = ++a; 3
+    // what is the value of a, b, and c?
+
+
+
+    var d = "hello";
+    var e = false;
+
+    d++; NaN
+    e++; 0
+
+    var perplexed; // perplexed is undefined (no value is assigned)
+    perplexed + 2; NaN
+
+    var price = 2.7; //to.Fixed() converts a number into a string keeping a specified number of decimals.
+    price.toFixed(2); (2 decimals .70) = 2.70
+
+    var price = "2.7";
+    price.toFixed(2); ???
+
+
+        isNaN(0) false
+
+        isNaN(1) false
+
+    isNaN("") false
+
+    isNaN("string") true
+
+    isNaN("0") false
+
+    isNaN("1") false
+
+    isNaN("3.145") false
+
+    isNaN(Number.MAX_VALUE) false
+
+    isNaN(Infinity) false
+
+    isNaN("true") true
+
+    isNaN(true) false
+
+    isNaN("false") true
+
+    isNaN(false) true (false)
+
+    // to illustrate why the isNaN() function is needed:
+    NaN == NaN
+
+    !true false
+
+    !false true
+
+    !!true true
+
+    !!false false
+
+    !!0 false..
+
+    !!-0 false..
+
+    !!1 true..
+
+    !!-1 true..
+
+    !!0.1 true..
+
+    !!"hello" true..
+
+    !!"" false..
+
+    !!'' false..
+
+    !!"0" true..
+
+        var sample = "Hello Codeup";
+    sample.length = 12
+
+sample.toUpperCase() makes all the characters in the string uppercase
+    sample.toLowerCase() makes all characters lowercase.constructor
+
+    // concatentate to "Hello Codeup Students"
+    // or
+    "Hello Codeup " + "Students"
+
+    //replace students with class
+    string.replace(searchvalue, newvalue)
+
+ //find the index of c. then C
+    sample.indexOf("C")
+    6
+
+    sample.indexOf("c")
+    -6
+
+    // Retrieve a substring that contains only the word "Hello Codeup" by using indexOf() and substring()
+    sample.substring(6)
+    // for Hello codeup class
+    sample.substring(6, 12)
+
+    var pricePerMoviePerDay = 3
+    var littleMermaidPerDay = 3
+    var brotherBearPerDay = 5
+    var herculesPerDay = 1
+
+    console.log(pricePerMoviePerDay * (littleMermaidPerDay + brotherBearPerDay + herculesPerDay));
+
+
+
+
+    var googleHourlyRate = 400
+    var amazonHourlyRate = 380
+    var facebookHourlyRate = 350
+    var googleHoursWorked = 6
+    var amazonHoursWorked = 4
+    var facebookHoursWorked = 10
+
+
+
+    // var itemsPurchased = 5; 
+    // var offerNotExpired = true; 
+    // var isPremiumMember = false 
+    // var productOffer = ((itemsPurchased > 2) || premiumMember) && offerNotExpired;
+
+    var username = "codeup"
+    var password = 'notastrongpassword'
+
+
+
+
+
 </script>
 </body>
 </html>
