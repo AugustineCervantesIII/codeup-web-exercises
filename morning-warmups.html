@@ -256,7 +256,9 @@ var numberOfItemsBought = 3
     var minLength = password.length >= passwordMinLength
     var maxLength = username.length <= usernameMaxLength
     var passwordNotUsedWithUsername = password.indexOf(username)
-    var passwordIsValid = minLength && maxLength && passwordNotUsedWithUsername
+    var passwordIsValid = minLength && maxLength && passwordNotUsedWithUsername && isTrim;
+
+    console.log(passwordIsValid)
 
 
 
