@@ -208,8 +208,9 @@ sample.toUpperCase() makes all the characters in the string uppercase
     var littleMermaidPerDay = 3
     var brotherBearPerDay = 5
     var herculesPerDay = 1
+    var totalPayed = pricePerMoviePerDay * (littleMermaidPerDay + brotherBearPerDay + herculesPerDay)
 
-    console.log(pricePerMoviePerDay * (littleMermaidPerDay + brotherBearPerDay + herculesPerDay));
+    console.log(totalPayed);
 
 
 
@@ -217,11 +218,14 @@ sample.toUpperCase() makes all the characters in the string uppercase
     var googleHourlyRate = 400
     var amazonHourlyRate = 380
     var facebookHourlyRate = 350
+
     var googleHoursWorked = 6
     var amazonHoursWorked = 4
     var facebookHoursWorked = 10
 
+    var weeksTotalPay = (googleHourlyRate * googleHoursWorked) + (amazonHourlyRate * amazonHoursWorked) + (facebookHourlyRate * facebookHoursWorked)
 
+    console.log(weeksTotalPay)
 
     // var itemsPurchased = 5; 
     // var offerNotExpired = true; 
@@ -230,6 +234,29 @@ sample.toUpperCase() makes all the characters in the string uppercase
 
     var username = "codeup"
     var password = 'notastrongpassword'
+
+ var classNotFull = true
+    var noScheduleConflict = true
+    var canBeEnrolled = classNotFull && noScheduleConflict
+
+    console.log(canBeEnrolled)
+
+var numberOfItemsBought = 3
+    var offerNotExpired = true
+    var premiumMember = true
+    var productDiscount = offerNotExpired && (premiumMember || numberOfItemsBought >= 3)
+
+    console.log(productDiscount)
+
+    var password = 'notastrongpassword'
+    var username = 'codeup'
+    var passwordMinLength = 5
+    var usernameMaxLength = 20
+
+    var minLength = password.length >= passwordMinLength
+    var maxLength = username.length <= usernameMaxLength
+    var passwordNotUsedWithUsername = password.indexOf(username)
+    var passwordIsValid = minLength && maxLength && passwordNotUsedWithUsername
 
 
 
