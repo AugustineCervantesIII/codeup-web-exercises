@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
 
     "use strict";
@@ -192,10 +192,6 @@
     // console.log(addFive(5))
 
 
-
-
-
-
 // condition: running out of milk
     // action: go to store, to the store.
     // var outOfMilk = false;
@@ -209,16 +205,12 @@
     // console.log(goingToStore);
 
 
-
-
     // var x = 5
     // if (x === 5){
     //     console.log('Yep, that is five.');
     // } else {
     //     console.log('Nope, not five.')
     // }
-
-
 
 
 //     function isiTANumber(parameter){
@@ -228,7 +220,6 @@
 //     }
 //
 //     console.log(isItANumber(7));
-
 
 
     // if (ownCow === tue) {
@@ -245,11 +236,9 @@
     //     //going to store for milk
     //
     // } else {
-        //milk my own cow
+    //milk my own cow
 
     //}
-
-
 
 
     // function isItANumber(parameter) {
@@ -263,7 +252,6 @@
 //     console.log(isItANumber(7));
 //     console.log(isItANumber("Pop"));
 //     console.log(isItANumber(false));
-
 
 
 // if/else if/else
@@ -280,7 +268,6 @@
     // }
 
 
-
 // function isThisThirtyFive(parameter){
 //         if(parameter === 35) {
 //             return "nailed it, that's 35";
@@ -294,12 +281,10 @@
 // console.log(isThisThirtyFive(35));
 
 
-
 // var doWeHaveMilk = true
 //     var action = (doWeHaveMilk) ? "Making a bowl of cereal." : "heading over to the store";
 //
 // console.log(action);
-
 
 
 // function isItANumber(parameter){
@@ -307,8 +292,6 @@
 //     return message;
 // }
 // or return instead of var message and delete the return message
-
-
 
 
 // var animal = "Cow";
@@ -328,20 +311,17 @@
 //     }
 
 
-switch (prompt("What is your favorite sandwich meat").toLowerCase()){
-    case "olive loaf":
-        alert("a great choice");
-        break;
-    case "brisket":
-        alert("A simple meat");
-        break;
-    default:
-        alert("gross");
-        break;//dont have to have break on last case but is better to have
-}
-
-
-
+    switch (prompt("What is your favorite sandwich meat").toLowerCase()) {
+        case "olive loaf":
+            alert("a great choice");
+            break;
+        case "brisket":
+            alert("A simple meat");
+            break;
+        default:
+            alert("gross");
+            break;//dont have to have break on last case but is better to have
+    }
 
 
 
