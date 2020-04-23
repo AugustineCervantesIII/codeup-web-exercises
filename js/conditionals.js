@@ -226,7 +226,7 @@ console.log(calculateTotal(0, 100));
      * HINT: The way we prompt for a value could be improved
      */
 
-const userEntry = confirm('Would you like to enter in a number?');
+var userEntry = confirm('Would you like to enter in a number?');
     if (userEntry === true) {
         const userNumber = prompt('What is your number?');
         if (isNaN(userNumber)) {
@@ -237,8 +237,8 @@ const userEntry = confirm('Would you like to enter in a number?');
             } else {
                 alert('That is an odd number')
             }
-        const hundred = 100;
-        const plusHundred = +hundred + +userNumber;
+        var hundred = 100;
+        var plusHundred = +hundred + +userNumber;
             alert(userNumber + " plus 100 is " + plusHundred);
         if (userNumber >= 0) {
             alert(userNumber + ' is also positive')
@@ -248,7 +248,26 @@ const userEntry = confirm('Would you like to enter in a number?');
         }
     }
 
-
-
+    //
+    // var userEntry = confirm('Would you like to enter in a number?');
+    // if (userEntry === true) {
+    //     const userNumber = Number(prompt('What is your number?'));
+    //     if (isNaN(userNumber)) {
+    //         alert('That is not a number');
+    //     } else {
+    //         if (userNumber % 2 === 0) {
+    //             alert('That is an even number.');
+    //         } else {
+    //             alert('That is an odd number')
+    //         }
+    //         alert(userNumber + ' + 100 is ' + (userNumber + 100));
+    //
+    //         if (userNumber >= 0) {
+    //             alert(userNumber + ' is also positive')
+    //         } else {
+    //             alert(userNumber + ' is also negative')
+    //         }
+    //     }
+    // }
 
 
