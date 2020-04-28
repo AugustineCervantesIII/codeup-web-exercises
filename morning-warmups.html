@@ -10,258 +10,301 @@
 
     "use strict"
 
-function eightCharactersLong(str){
-        if (str.length >= 8) {
-            return true;
-        } else {
-            return false
-        }
-        // return str.length >= 8;
+// function eightCharactersLong(str){
+//         if (str.length >= 8) {
+//             return true;
+//         } else {
+//             return false
+//         }
+//         // return str.length >= 8;
+//     }
+//
+//
+//     console.log(eightCharactersLong("cat")); // false
+//     console.log(eightCharactersLong("augustinecervantes")) //true
+//
+//     function twoMoreAwayFromZero(num){
+//         if (num >= 0) {
+//             return num + 2;
+//         } else {
+//             return num -2;
+//         }
+//     }
+//
+//     console.log(twoMoreAwayFromZero(2)); // return 4
+//     console.log(twoMoreAwayFromZero(0)); // return 2
+//     console.log(twoMoreAwayFromZero(0.5)); // return 2.5
+//     console.log(twoMoreAwayFromZero(-2)); // return -4
+//     console.log(twoMoreAwayFromZero(-3.5)); // return -5.5
+//
+//     function quotient(num1, num2) {
+//         return num1 / num2
+//     }
+//
+//     // write a function that returns the number 7
+//
+//     function returnsTheNumberSeven() {
+//         return 7;
+//     }
+//
+//     console.log(returnsTheNumberSeven);
+//
+//     function isEvenNum(num){
+//         return num % 2 === 0;
+//     }
+//
+// function returnEvenOddMessage(num){
+//     if (isEvenNum(num)) {
+//         return "is even";
+//     } else {
+//         return "is odd";
+//     }
+// }
+//
+//
+// function wholeNum(num){
+//         return Math.round(num);
+// }
+//
+// /* function isWholeNumber(num){
+//         return num === Math.round(num);
+//     }
+// return num will compare itself to the rounded num
+// math.round returns the closest long to the argument by adding 1/2.
+// words will return NaN.
+//  */
+//
+// function largerNumber(num1, num2){
+//     if (num1 >= num2) {
+//         return num1;
+//     } else {
+//         return num2;
+//     }
+// }
+//
+//     1 12
+//     2 typeof12 (string2)
+//     3 2 left over
+//     4 3 + 4 is 34 (3 + 4 is 34)
+//     5 false
+//     6 true (false)
+//     7 true (false)
+//     8 true
+//     9 true
+//     10 false (true)
+//     11 false
+//     12 1 left over
+//     13 false
+//     14 true
+//     15 true
+//     16 true (false)
+//     17 true
+//     18 true
+//
+//     var a = 1; 1
+//     var b = a++; 1
+//     var c = ++a; 3
+//     // what is the value of a, b, and c?
+//
+//
+//
+//     var d = "hello";
+//     var e = false;
+//
+//     d++; NaN
+//     e++; 0
+//
+//     var perplexed; // perplexed is undefined (no value is assigned)
+//     perplexed + 2; NaN
+//
+//     var price = 2.7; //to.Fixed() converts a number into a string keeping a specified number of decimals.
+//     price.toFixed(2); (2 decimals .70) = 2.70
+//
+//     var price = "2.7";
+//     price.toFixed(2); ???
+//
+//
+//         isNaN(0) false
+//
+//         isNaN(1) false
+//
+//     isNaN("") false
+//
+//     isNaN("string") true
+//
+//     isNaN("0") false
+//
+//     isNaN("1") false
+//
+//     isNaN("3.145") false
+//
+//     isNaN(Number.MAX_VALUE) false
+//
+//     isNaN(Infinity) false
+//
+//     isNaN("true") true
+//
+//     isNaN(true) false
+//
+//     isNaN("false") true
+//
+//     isNaN(false) true (false)
+//
+//     // to illustrate why the isNaN() function is needed:
+//     NaN == NaN
+//
+//     !true false
+//
+//     !false true
+//
+//     !!true true
+//
+//     !!false false
+//
+//     !!0 false..
+//
+//     !!-0 false..
+//
+//     !!1 true..
+//
+//     !!-1 true..
+//
+//     !!0.1 true..
+//
+//     !!"hello" true..
+//
+//     !!"" false..
+//
+//     !!'' false..
+//
+//     !!"0" true..
+//
+//         var sample = "Hello Codeup";
+//     sample.length = 12
+//
+// sample.toUpperCase() makes all the characters in the string uppercase
+//     sample.toLowerCase() makes all characters lowercase.constructor
+//
+//     // concatentate to "Hello Codeup Students"
+//     // or
+//     "Hello Codeup " + "Students"
+//
+//     //replace students with class
+//     string.replace(searchvalue, newvalue)
+//
+//  //find the index of c. then C
+//     sample.indexOf("C")
+//     6
+//
+//     sample.indexOf("c")
+//     -6
+//
+//     // Retrieve a substring that contains only the word "Hello Codeup" by using indexOf() and substring()
+//     sample.substring(6)
+//     // for Hello codeup class
+//     sample.substring(6, 12)
+//
+//     var pricePerMoviePerDay = 3
+//     var littleMermaidPerDay = 3
+//     var brotherBearPerDay = 5
+//     var herculesPerDay = 1
+//     var totalPayed = pricePerMoviePerDay * (littleMermaidPerDay + brotherBearPerDay + herculesPerDay)
+//
+//     console.log(totalPayed);
+//
+//
+//
+//
+//     var googleHourlyRate = 400
+//     var amazonHourlyRate = 380
+//     var facebookHourlyRate = 350
+//
+//     var googleHoursWorked = 6
+//     var amazonHoursWorked = 4
+//     var facebookHoursWorked = 10
+//
+//     var weeksTotalPay = (googleHourlyRate * googleHoursWorked) + (amazonHourlyRate * amazonHoursWorked) + (facebookHourlyRate * facebookHoursWorked)
+//
+//     console.log(weeksTotalPay)
+//
+//     // var itemsPurchased = 5; 
+//     // var offerNotExpired = true; 
+//     // var isPremiumMember = false 
+//     // var productOffer = ((itemsPurchased > 2) || premiumMember) && offerNotExpired;
+//
+//     var username = "codeup"
+//     var password = 'notastrongpassword'
+//
+//  var classNotFull = true
+//     var noScheduleConflict = true
+//     var canBeEnrolled = classNotFull && noScheduleConflict
+//
+//     console.log(canBeEnrolled)
+//
+// var numberOfItemsBought = 3
+//     var offerNotExpired = true
+//     var premiumMember = true
+//     var productDiscount = offerNotExpired && (premiumMember || numberOfItemsBought >= 3)
+//
+//     console.log(productDiscount)
+//
+//     var password = 'notastrongpassword'
+//     var username = 'codeup'
+//     var passwordMinLength = 5
+//     var usernameMaxLength = 20
+//
+//     var minLength = password.length >= passwordMinLength
+//     var maxLength = username.length <= usernameMaxLength
+//     var passwordNotUsedWithUsername = password.indexOf(username)
+//     var isTrim = passwordNotUsedWithUsername
+//     var passwordIsValid = minLength && maxLength && passwordNotUsedWithUsername && isTrim
+//
+//     console.log(passwordIsValid)
+
+// 1 Dynamically-typed languages
+//     are those (like JavaScript) where the interpreter
+//     assigns variables a type at runtime based on the variable's value at the time.
+    //like js, php, python, ruby
+
+    // 2 = is used to define a variable
+    // == is equel, compares two values
+    // (numbers, strings, or boolean)
+    // to see if they are the same.
+    //     === strict equel to, compares if the data type and values are the same
+
+    // 3 truthy are expressions that evaluate to the boolean true value
+    // and falsy to the false value
+    // truth and false are not limited to boolean data types
+
+    // 4 A parameter is a variable in a method definition.
+    //     When a method is called, the arguments are the
+    // data you pass into the method's parameters. ' +
+    // 'Parameter is variable in the declaration of function. ' +
+    // 'Argument is the actual value of this variable that gets passed to function.
+
+    // 5 like the alert and prompt
+    // when the function is passed through another function to be called back
+
+
+    // 6 A higher-order function is a function that can take another function
+    // as an argument, or that returns a function as a result.
+
+    //y is undefined
+    7 let x = function() {
+        2 + 2;
     }
-
-
-    console.log(eightCharactersLong("cat")); // false
-    console.log(eightCharactersLong("augustinecervantes")) //true
-
-    function twoMoreAwayFromZero(num){
-        if (num >= 0) {
-            return num + 2;
-        } else {
-            return num -2;
-        }
-    }
-
-    console.log(twoMoreAwayFromZero(2)); // return 4
-    console.log(twoMoreAwayFromZero(0)); // return 2
-    console.log(twoMoreAwayFromZero(0.5)); // return 2.5
-    console.log(twoMoreAwayFromZero(-2)); // return -4
-    console.log(twoMoreAwayFromZero(-3.5)); // return -5.5
-
-    function quotient(num1, num2) {
-        return num1 / num2
-    }
-
-    // write a function that returns the number 7
-
-    function returnsTheNumberSeven() {
-        return 7;
-    }
-
-    console.log(returnsTheNumberSeven);
-
-    function isEvenNum(num){
-        return num % 2 === 0;
-    }
-
-function returnEvenOddMessage(num){
-    if (isEvenNum(num)) {
-        return "is even";
-    } else {
-        return "is odd";
-    }
-}
-
-
-function wholeNum(num){
-        return Math.round(num);
-}
-
-/* function isWholeNumber(num){
-        return num === Math.round(num);
-    }
-return num will compare itself to the rounded num
-math.round returns the closest long to the argument by adding 1/2.
-words will return NaN.
- */
-
-function largerNumber(num1, num2){
-    if (num1 >= num2) {
-        return num1;
-    } else {
-        return num2;
-    }
-}
-
-    1 12
-    2 typeof12 (string2)
-    3 2 left over
-    4 3 + 4 is 34 (3 + 4 is 34)
-    5 false
-    6 true (false)
-    7 true (false)
-    8 true
-    9 true
-    10 false (true)
-    11 false
-    12 1 left over
-    13 false
-    14 true
-    15 true
-    16 true (false)
-    17 true
-    18 true
-
-    var a = 1; 1
-    var b = a++; 1
-    var c = ++a; 3
-    // what is the value of a, b, and c?
-
-
-
-    var d = "hello";
-    var e = false;
-
-    d++; NaN
-    e++; 0
-
-    var perplexed; // perplexed is undefined (no value is assigned)
-    perplexed + 2; NaN
-
-    var price = 2.7; //to.Fixed() converts a number into a string keeping a specified number of decimals.
-    price.toFixed(2); (2 decimals .70) = 2.70
-
-    var price = "2.7";
-    price.toFixed(2); ???
-
-
-        isNaN(0) false
-
-        isNaN(1) false
-
-    isNaN("") false
-
-    isNaN("string") true
-
-    isNaN("0") false
-
-    isNaN("1") false
-
-    isNaN("3.145") false
-
-    isNaN(Number.MAX_VALUE) false
-
-    isNaN(Infinity) false
-
-    isNaN("true") true
-
-    isNaN(true) false
-
-    isNaN("false") true
-
-    isNaN(false) true (false)
-
-    // to illustrate why the isNaN() function is needed:
-    NaN == NaN
-
-    !true false
-
-    !false true
-
-    !!true true
-
-    !!false false
-
-    !!0 false..
-
-    !!-0 false..
-
-    !!1 true..
-
-    !!-1 true..
-
-    !!0.1 true..
-
-    !!"hello" true..
-
-    !!"" false..
-
-    !!'' false..
-
-    !!"0" true..
-
-        var sample = "Hello Codeup";
-    sample.length = 12
-
-sample.toUpperCase() makes all the characters in the string uppercase
-    sample.toLowerCase() makes all characters lowercase.constructor
-
-    // concatentate to "Hello Codeup Students"
-    // or
-    "Hello Codeup " + "Students"
-
-    //replace students with class
-    string.replace(searchvalue, newvalue)
-
- //find the index of c. then C
-    sample.indexOf("C")
-    6
-
-    sample.indexOf("c")
-    -6
-
-    // Retrieve a substring that contains only the word "Hello Codeup" by using indexOf() and substring()
-    sample.substring(6)
-    // for Hello codeup class
-    sample.substring(6, 12)
-
-    var pricePerMoviePerDay = 3
-    var littleMermaidPerDay = 3
-    var brotherBearPerDay = 5
-    var herculesPerDay = 1
-    var totalPayed = pricePerMoviePerDay * (littleMermaidPerDay + brotherBearPerDay + herculesPerDay)
-
-    console.log(totalPayed);
-
-
-
-
-    var googleHourlyRate = 400
-    var amazonHourlyRate = 380
-    var facebookHourlyRate = 350
-
-    var googleHoursWorked = 6
-    var amazonHoursWorked = 4
-    var facebookHoursWorked = 10
-
-    var weeksTotalPay = (googleHourlyRate * googleHoursWorked) + (amazonHourlyRate * amazonHoursWorked) + (facebookHourlyRate * facebookHoursWorked)
-
-    console.log(weeksTotalPay)
-
-    // var itemsPurchased = 5; 
-    // var offerNotExpired = true; 
-    // var isPremiumMember = false 
-    // var productOffer = ((itemsPurchased > 2) || premiumMember) && offerNotExpired;
-
-    var username = "codeup"
-    var password = 'notastrongpassword'
-
- var classNotFull = true
-    var noScheduleConflict = true
-    var canBeEnrolled = classNotFull && noScheduleConflict
-
-    console.log(canBeEnrolled)
-
-var numberOfItemsBought = 3
-    var offerNotExpired = true
-    var premiumMember = true
-    var productDiscount = offerNotExpired && (premiumMember || numberOfItemsBought >= 3)
-
-    console.log(productDiscount)
-
-    var password = 'notastrongpassword'
-    var username = 'codeup'
-    var passwordMinLength = 5
-    var usernameMaxLength = 20
-
-    var minLength = password.length >= passwordMinLength
-    var maxLength = username.length <= usernameMaxLength
-    var passwordNotUsedWithUsername = password.indexOf(username)
-    var isTrim = passwordNotUsedWithUsername
-    var passwordIsValid = minLength && maxLength && passwordNotUsedWithUsername && isTrim
-
-    console.log(passwordIsValid)
-
-
+    let y = x();
+
+    // 8 use strict helps prevent using undeclared variables
+    //
+    // 9 An IIFE (Immediately Invoked Function Expression)
+    // is a JavaScript function that runs as soon as it is defined.
+    //
+    //
+    // 10 A switch statement is usually more efficient or more readable than a set of nested ifs.
+    //
+
+    // 11 also more readable.
 
 
 
