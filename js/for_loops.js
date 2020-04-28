@@ -1,4 +1,5 @@
 'use strict';
+
 function showMultiplicationTable(num) {
     for (let a = 1; a <= 10; a++){
         let b = num * a;
