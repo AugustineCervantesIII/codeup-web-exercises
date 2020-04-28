@@ -18,6 +18,8 @@ console.log(showMultiplicationTable(7));
 //for loop. for(initialization; test; iteration) {
 //             do something a set number of times
 //          }
+
+//study
 for (let b = 1; b <= 10; b++){
     let randomNumber = Math.floor(Math.random() * 180) + 20;
     if(randomNumber % 2 === 0){
@@ -35,6 +37,8 @@ for (let b = 1; b <= 10; b++){
 //         console.log(c);
 //     }
 // }
+
+//study
 for (let c = 1; c < 10; c++){
     console.log(c.toString().repeat(c));
 }
