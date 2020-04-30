@@ -13,7 +13,7 @@ console.log("Let's manipulate some arrays");
 // .push adds elements to the end of an array
 // .unshift adds elements to the beginning of an array
 
-var numStrings = ['three','four','five','six','seven'];
+var numStrings = ['three', 'four', 'five', 'six', 'seven'];
 console.log(numStrings);
 
 // TO DO TOGETHER: Use the .push method to add the next String in the sequence.
@@ -42,7 +42,7 @@ console.log(numStrings);
 * 						REMOVING ELEMENTS
 *************************************************************** */
 
-var activeCohorts = ['deimos','europa','fortuna','ganymede','ada','bayes'];
+var activeCohorts = ['deimos', 'europa', 'fortuna', 'ganymede', 'ada', 'bayes'];
 
 // TO DO TOGETHER: Use the .pop method to remove the last cohort in the list.
 
@@ -71,7 +71,7 @@ console.log(activeCohorts);
 * 					LOCATING ARRAY ELEMENTS
 *************************************************************** */
 
-var fruit = ['apples','oranges','grapes','bananas','apples','oranges','grapes'];
+var fruit = ['apples', 'oranges', 'grapes', 'bananas', 'apples', 'oranges', 'grapes'];
 
 // TO DO TOGETHER: Find the first index of 'apples' in the array
 
@@ -84,25 +84,25 @@ console.log(fruit.lastIndexOf('apples'));
 // TO DO: If the last element in the fruits array is 'grapes', remove it from the list.
 
 console.log(fruit);
-if(fruit.lastIndexOf('grapes') === fruit.length -1){
+if (fruit.lastIndexOf('grapes') === fruit.length - 1) {
     fruit.pop();
-};
+}
+;
 console.log(fruit);
 
 // Console log your new array.
-
 
 
 /* ***************************************************************
 * 							SLICING
 *************************************************************** */
 
-var instructors = ['justin','david','sophie','vivian','casey','trant','daniel'];
+var instructors = ['justin', 'david', 'sophie', 'vivian', 'casey', 'trant', 'daniel'];
 
 // TO DO TOGETHER: Create a variable named ganymedeInstructors that stores an array list of
 // 'justin','david', and 'sophie'. Do this with the .slice method.
 
-var ganymedeInstructors = instructors.slice(0,3);
+var ganymedeInstructors = instructors.slice(0, 3);
 console.log(ganymedeInstructors)
 
 // TO DO TOGETHER: Create a variable named fortunaInstructors that stores an array list of all
