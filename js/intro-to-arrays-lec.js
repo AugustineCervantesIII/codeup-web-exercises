@@ -151,12 +151,12 @@ console.log(returnLastElement(shapes));
 // TODO: How does the loop know when to stop iterating?
 
 // TODO: Using a for loop, iterate through the instructors array and console.log each instructor
-for(let i = 0; i < instructors.length; i ++){
+for(let i = 0; i < instructors.length; i++){
     console.log(instructors[i]);
 }
 
 // TODO: Using a for loop, iterate through the daysOfTheWeek array and console.log each day of the week
-for(let i = 0; i < daysOfTheWeek.length; i ++){
+for(let i = 0; i < daysOfTheWeek.length; i++){
     console.log(daysOfTheWeek[i]);
 }
 // TODO: Using a for loop, iterate through the favoriteFoods array and console.log each favorite food
@@ -181,8 +181,8 @@ for(let i = 0; i < favoriteFoods.length; i ++){
 *************************************************************** */
 
 // TODO TOGETHER: Using a for each loop, console.log each shape from the shapes array
-shapes.forEach(function(shape,index) {
-    console.log(shape, index);
+shapes.forEach(function(shapes,index) {
+    console.log(shapes, index);
 });
 
 // colors.forEach(function (color, index, array) {
