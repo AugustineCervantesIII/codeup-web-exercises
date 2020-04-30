@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    let names = ['mikey', 'adrian', 'justin', 'brandon'];
+    var names = ['mikey', 'adrian', 'justin', 'brandon'];
     console.log(names);
     /**
      * TODO:
@@ -58,7 +58,7 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    let arrayFirst = ['1','2','3','4','5']
+    var arrayFirst = ['1','2','3','4','5']
     function first(array){
         return array[0];
     }
