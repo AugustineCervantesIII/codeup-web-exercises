@@ -290,10 +290,10 @@
     // as an argument, or that returns a function as a result.
 
     //y is undefined
-    7 let x = function() {
-        2 + 2;
-    }
-    let y = x();
+    // 7 let x = function() {
+    //     2 + 2;
+    // }
+    // let y = x();
 
     // 8 use strict helps prevent using undeclared variables
     //
@@ -309,6 +309,40 @@ let favoriteShows = ['supernatural', 'theflash', 'whitecollar', 'westworld', 'ri
 favoriteShows.forEach(function(favoriteShows, index){
     console.log(favoriteShows, index)
 });
+
+    //write a function that prints the number 1 - 100
+    // For numbers divisible by 3, print “Fizz”
+    //For numbers divisible by 5, print “Buzz”
+    //For numbers divisible by both 3 and 5, print “FizzBuzz”
+
+    for (let i = 1; i < 101; i++){
+        if(i % 15 === 0) console.log('fizzbuzz');
+        else if (i % 3 === 0) console.log('fizz');
+        else if (i % 5 === 0) console.log('buzz');
+        else console.log(i);
+    }
+
+    // another solution for this is
+
+    for(let i = 0;i < 100;) console.log((++i % 3 ? '':'fizz')+( i % 5 ?'':'buzz') ||i)
+
+    //and
+    // function fizzbuzz(){
+    //     for(let i = 1; i <= 100; i++){
+    //         if(i % 3 === 0 && i % 5 === 0){
+    //             console.log('fizzbuzz');
+    //         } else if (i % 3 === 0){
+    //             console.log('fizz');
+    //         }else if(i % 5 === 0){
+    //             console.log('buzz');
+    //         } else {
+    //             console.log(i);
+    //         }
+    //     }
+    // }
+
+
+
 
 </script>
 </body>
