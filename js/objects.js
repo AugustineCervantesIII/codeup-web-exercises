@@ -22,7 +22,6 @@
 
     console.log(person.firstName);
     console.log(person.lastName)
-    console.log(person.sayHello());
 
     /**
      * TODO:
@@ -34,7 +33,10 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-
+    person.sayHello = function(){
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
+    }
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -167,5 +169,16 @@
      *   `showBookInfo` function.
      */
 
+    function createBook(title, first, last, arr){
+        let newBook = {
+            title: title, author: {
+            firstName: first,
+                lastName: last
+            }
+        };
+        arr.push(newBook);
+        return arr;
+    }
+    createBook("how learning works", "susan", "ambrose", book);
 
 })();
