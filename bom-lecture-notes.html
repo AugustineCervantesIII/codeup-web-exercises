@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom lecture notes</title>
+</head>
+<body>
+<script>
+    //all code should be in your
+    // iife - immediately invoked function expression
+    // (function(){
+    //  code goes here.
+    // })():
+    (function(){
+
+    let i = 1;
+    let pillow = "MyPillow";
+    let arr = [1, 2, 3];
+
+    // console.log(window);
+
+    // alert('hi register for my site.')
+    // window.alert('you really should register ffor my site...');
+
+        //set interval method takes two arguments
+        // first is a callback function (handler)
+        //second parameter is the amount of time in milliseconds before the code runs again
+        //first set your Interval method to a variable because the return because it is an ID.
+        // define the stop point, clearInterval(intervalID)
+
+    // function handler(){
+    //     let yesNo = confirm("do you want to see the news");
+    //     if (yesNo) {
+    //         alert('i know you wanted to see the news');
+    //         clearInterval(intervalID);
+    //     }
+    // }
+    // let intervalID = setInterval(handler, 3000);
+    //
+    // let registerForMyWebzone = setInterval(function(){
+    //     if(confirm('hey register for my site')){
+    //         let userEmail = prompt('what is your email');
+    //         clearInterval(registerForMyWebzone);
+    //     }
+    // }, 3000);
+
+        // let x = 1;
+        // let runThreeTimes = setInterval(function(){
+        //     alert('lets get this')
+        //     if(x === 3){
+        //         clearInterval(runThreeTimes);
+        //     } else {
+        //         x++;
+        //     }
+        // }, 4500);
+
+        //setTimeout
+        // similar to setInterval, but only meant to happen oce
+
+        // setTimeout(function(){
+        //     alert('congrats on coding')
+        // }, 4000)
+        //
+        function alertAdBlock(){
+            alert('hey stop using adBlocker');
+        }
+        // setTimeout(alertAdBlock, 4500);
+
+        // window.location = "http://google.com";
+
+        if(confirm('did you mess up?')) {
+            location.reload();
+        }
+
+    })();
+</script>
+<h1>BOM</h1>
+</body>
+</html>
