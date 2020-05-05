@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom lecture notes</title>
+</head>
+<body>
+<script>
+    "use strict";
+    (function(){
+ //retrieve elements by id, class, tag name
+
+        let header = document.getElementById('main-title');
+        console.log(header);
+
+        // class - will return an html collection (all the elements that have that class)
+        // will also be a listed (looks like an array but is not
+        let cards = document.getElementsByClassName('card');
+        console.log(cards);
+        console.log(cards[0]) //will show the first index in the class
+        let cardsArr = Array.from(cards); // convert html collection and node-list to arrays
+        cardsArr.pop();
+        console.log(cardsArr);
+
+        // tag
+        let h1 = document.getElementsByTagName('h1');
+        console.log(h1[0])
+
+        //targeting by
+        // .getElementById('')
+        // .getElementsByClassName('')
+        // .getElementsByTagName('')
+
+ // querySelector() and querySelectorAll()
+
+        //querySelector()
+        let headerTitle = document.querySelector('header h1'); // similar to css
+        console.log(headerTitle);
+        //or
+        // let headerTitle = document.querySelector('#main-title'); // similar to css
+        // console.log(headerTitle);
+
+        //querySelectorAll() show a collection
+        let lis = document.querySelectorAll('li');
+        let liCollection = document.querySelectorAll('li');
+        console.log(lis);
+        console.log(liCollection);
+
+ // get value of innerHTML
+
+        let body = document.getElementsByTagName('body');
+        console.log(body[0]);
+
+        let title = document.getElementById('main-title');
+        console.log(title.innerHTML);
+        console.log(title.innerText)
+        //to change the target
+        title.innerHTML = '<em>Hi Mom!</em>';
+        //innerText will show the em tags
+
+ // access AND modify attribute
+
+        //check if it exists
+        let cowboy = document.getElementById('cowboy');
+        console.log(cowboy.hasAttribute('data-1'));
+        //get an attribute value
+        console.log(cowboy.getAttribute('data-1'));
+        //create a new attribute and change it
+        cowboy.setAttribute('data-test', 'testing');
+        //remove attribute
+        cowboy.removeAttribute('data-test');
+        console.log(cowboy);
+
+ // accessing and modify styles
+
+        //single style
+        let jumbotron = document.querySelector('.jumbotron');
+        jumbotron.style['font-family'] = 'times';
+
+// change text "some items" to apple with blue background
+        let h2 = document.querySelectorAll('h2')[2];
+        h2.innerText = "Apple";
+        h2.style.backgroundColor = 'blue';
+        h2.style.color = 'white'; //changes apple text color
+        h2.style.textAlign = 'right'; //moves the h2 to the right
+
+
+//when using the .addEventListener method, note the three parameters
+       //document.addEventListener('type', function(){}, useCapture);
+        //type - 'click', 'mouseover', 'keydown', and others
+        //function is a callback function, important to note that
+        // the passed argument is the function itself and not a return
+        //useCapture will capture the event in the DOM tree if set to
+        // true and wont when set to false
+
+
+
+
+
+    })();
+</script>
+</body>
+</html>
