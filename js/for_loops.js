@@ -1,4 +1,12 @@
 'use strict';
+//   for (start; condition; add i until condition to stop)
+// for(i = 0; i < 10; i++)
+// start at 0,
+// condition when when i is less than 10 to stop
+// i++ is 1 + 1. will continue adding one until i is less than 10
+//i-- is 1 - 1
+//> greater than
+//< less than
 
 function showMultiplicationTable(num) {
     for (let a = 1; a <= 10; a++){
@@ -28,7 +36,6 @@ for (let b = 1; b <= 10; b++){
         console.log(randomNumber + " is odd")
     }
 }
-
 
 
 // for (let c = 1; c <= 9; c++) {
