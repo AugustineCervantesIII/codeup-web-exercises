@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Morning Watm Ups</title>
+    <title>Morning Warm Ups</title>
 </head>
 <body>
 
 <script>
 
-    "use strict"
+    "use strict";
+    (function(){
 
 // function eightCharactersLong(str){
 //         if (str.length >= 8) {
@@ -305,26 +306,26 @@
     //
 
     // 11 also more readable.
-let favoriteShows = ['supernatural', 'theflash', 'whitecollar', 'westworld', 'rick&morty']
-favoriteShows.forEach(function(favoriteShows, index){
-    console.log(favoriteShows, index)
-});
+// let favoriteShows = ['supernatural', 'theflash', 'whitecollar', 'westworld', 'rick&morty']
+// favoriteShows.forEach(function(favoriteShows, index){
+//     console.log(favoriteShows, index)
+// });
 
     //write a function that prints the number 1 - 100
     // For numbers divisible by 3, print “Fizz”
     //For numbers divisible by 5, print “Buzz”
     //For numbers divisible by both 3 and 5, print “FizzBuzz”
 
-    for (let i = 1; i < 101; i++){
-        if(i % 15 === 0) console.log('fizzbuzz');
-        else if (i % 3 === 0) console.log('fizz');
-        else if (i % 5 === 0) console.log('buzz');
-        else console.log(i);
-    }
-
-    // another solution for this is
-
-    for(let i = 0;i < 100;) console.log((++i % 3 ? '':'fizz')+( i % 5 ?'':'buzz') ||i)
+    // for (let i = 1; i < 101; i++){
+    //     if(i % 15 === 0) console.log('fizzbuzz');
+    //     else if (i % 3 === 0) console.log('fizz');
+    //     else if (i % 5 === 0) console.log('buzz');
+    //     else console.log(i);
+    // }
+    //
+    // // another solution for this is
+    //
+    // for(let i = 0;i < 100;) console.log((++i % 3 ? '':'fizz')+( i % 5 ?'':'buzz') ||i)
 
     //and
     // function fizzbuzz(){
@@ -341,9 +342,36 @@ favoriteShows.forEach(function(favoriteShows, index){
     //     }
     // }
 
+    // Create a function that takes in a array input and returns true
+    // if one of the elements is a number that matches the number of total elements in the array.
+    // Example input: [1]
+    // Example output: true
 
+    // Example input: ['bob', 3, false]
+    // Example output: true
 
+    // Example input: [{'a': 'hello'}, 10, true]
+    // Example output: false
 
+    // Example input: [5, {'a': 'hello'}, 30, true, null]
+    // Example output: true
+
+    function arrayLength(arr){
+        for(let i = 0; 1< arr.length; i++){
+            if(arr[i] === arr.length){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //or
+    //     function arrayLength(arr){
+    //      return arr.includes(arr.length);
+    //     }
+    console.log(arrayLength(['bob', 3, false]));
+
+    })();
 </script>
 </body>
 </html>
