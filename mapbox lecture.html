@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+    <meta charset="UTF-8">
+    <title>mapbox lecture</title>
+<!-- this is to restyle the the mapbox
+ and removing the style inside the div under the h1-->
+    <style>
+        #map {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<h1>Map Box</h1>
+<div id='map'></div>
+<!--style='width: 400px; height: 300px;'
+removed from div id map-->
+<script src="js/keys.js"></script>
+<script>
+    // (function(){
+    mapboxgl.accessToken = mapBoxKey;
+    let map = new mapboxgl.Map({
+        // container has to match the div id 'map' in this case.
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252],
+        //or center: {lng: -98.4916, lat:29.4252}
+        //map.
+        //
+    });
+    // })();
+</script>
+</body>
+</html>

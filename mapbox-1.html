@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet'/>
+
+    <meta charset="UTF-8">
+    <title>mapbox exercise</title>
+</head>
+<body>
+<h1>Hometown buffet</h1>
+<div id='map' style='width: 100%; height: 80vh;'></div>
+<script>
+    mapboxgl.accessToken = mapBoxKey;
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252],
+    });
+
+    //markers
+    let marker = new mapboxgl.Marker()
+        marker.setLngLat({lng: -98.4916, lat: 29.4252})
+        marker.addTo(map);
+
+    //popup
+    let popup = new mapboxgl.Popup();
+    popup.setHTML('<h3>San Antonio, TX, 78205</h3>');
+    marker.setPopup(popup);
+
+    //events
+    map.on('click', function(){
+        console.log('hello');
+    });
+
+
+    // setTimeout(function () {
+    //     map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
+    //     map.setZoom(3.4);
+    //     map.setCenter([-98.4916, 29.4252);
+    // }, 5000)
+
+
+</script>
+
+
+</body>
+</html>
