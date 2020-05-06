@@ -36,7 +36,7 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        let button = document.getElementsByClassName('btn btn-primary')[0];
+        let button = document.getElementsByClassName('btn btn-primary')[0];//[0] to access the button
         let mainHeader = document.getElementById('main-header');
             button.addEventListener('click', function(){
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
@@ -61,6 +61,8 @@
         let buttonThree = document.getElementsByClassName('btn btn-secondary')[0];
         let listItems = document.getElementsByTagName('li');
         buttonThree.addEventListener('click', function(){
+        // TODO: Set text color on every other list item to grey
+        // TODO: Set text color of li with dbid = 1 to blue
         for (let i = 0; i < listItems.length; i++){
             if(i % 2 === 0){
                 listItems[i].style.color = 'grey';
@@ -73,8 +75,6 @@
         });
         //console.log(listItems);
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let buttonFour = document.getElementsByClassName('btn btn-dark')[0];

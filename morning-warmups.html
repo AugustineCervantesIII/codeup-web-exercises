@@ -356,20 +356,36 @@
     // Example input: [5, {'a': 'hello'}, 30, true, null]
     // Example output: true
 
-    function arrayLength(arr){
-        for(let i = 0; 1< arr.length; i++){
-            if(arr[i] === arr.length){
-                return true;
-            }
-        }
-        return false;
-    }
+    // function arrayLength(arr){
+    //     for(let i = 0; 1< arr.length; i++){
+    //         if(arr[i] === arr.length){
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
 
     //or
     //     function arrayLength(arr){
     //      return arr.includes(arr.length);
     //     }
-    console.log(arrayLength(['bob', 3, false]));
+    // console.log(arrayLength(['bob', 3, false]));
+
+
+        // Write a javascript function that takes in a number
+        // and returns the number raised to the power of four.
+        // If any argument is passed into the function that is
+        // not a number, return false.
+
+    function fourthPower(num){
+        if(!isNaN(num)){
+            return num ** 4;
+        } else {
+            return false;
+        }
+    }
+    console.log(fourthPower(2));
+    console.log(fourthPower('two'))
 
     })();
 </script>
