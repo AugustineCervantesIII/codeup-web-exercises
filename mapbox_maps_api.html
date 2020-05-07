@@ -18,39 +18,80 @@
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 11.5,
-        center: [-98.61251, 29.500899]
+        center: [-98.61251, 29.520899]
     });
 
-    geocode('3505 Wurzbach Rd #102, San Antonio, TX 78238', mapBoxKey).then(function(result){
-        console.log(result);
-    });
-    let marker = new mapboxgl.Marker()
-    marker.setLngLat({lng: -98.623396, lat: 29.47171})
-    marker.addTo(map);
-    let popup = new mapboxgl.Popup();
-    popup.setHTML('<h6>Sichuan House</h6>');
-    marker.setPopup(popup);
+    // geocode('3505 Wurzbach Rd #102, San Antonio, TX 78238', mapBoxKey).then(function(result){
+    //     console.log(result);
+    // });
+    // let marker = new mapboxgl.Marker()
+    // marker.setLngLat({lng: -98.623396, lat: 29.47171})
+    // marker.addTo(map);
+    // let popup = new mapboxgl.Popup();
+    // popup.setHTML('<h6>Sichuan House</h6>');
+    // marker.setPopup(popup);
+    //
+    //
+    // geocode('6417 Evers Rd, Leon Valley, TX 78238', mapBoxKey).then(function(result){
+    //    console.log(result);
+    // });
+    // let markerTwo = new mapboxgl.Marker()
+    // markerTwo.setLngLat({lng: -98.61251, lat: 29.500899})
+    // markerTwo.addTo(map);
+    // let popupTwo = new mapboxgl.Popup();
+    // popupTwo.setHTML('<h6>Leon Valley Cafe</h6>');
+    // markerTwo.setPopup(popupTwo);
+    //
+    // geocode('6565 Babcock Rd Suite 19, San Antonio, TX 78249', mapBoxKey).then(function(result){
+    //     console.log(result);
+    // });
+    // let markerThree = new mapboxgl.Marker()
+    // markerThree.setLngLat({lng: -98.614468, lat: 29.555787})
+    // markerThree.addTo(map);
+    // let popupThree = new mapboxgl.Popup();
+    // popupThree.setHTML('<h6>Nama Ramen</h6>');
+    // markerThree.setPopup(popupThree);
 
+    let eats = [
+        {
+            place: 'Nama Ramen',
+            food: 'Japanese',
+            address: '6565 Babcock Rd Suite 19, San Antonio, TX 78249',
 
-    geocode('6417 Evers Rd, Leon Valley, TX 78238', mapBoxKey).then(function(result){
-       console.log(result);
-    });
-    let markerTwo = new mapboxgl.Marker()
-    markerTwo.setLngLat({lng: -98.61251, lat: 29.500899})
-    markerTwo.addTo(map);
-    let popupTwo = new mapboxgl.Popup();
-    popupTwo.setHTML('<h6>Leon Valley Cafe</h6>');
-    markerTwo.setPopup(popupTwo);
+        },
+        {
+            place: 'Sichuan House',
+            food: 'Authentic Chinese',
+            address: '3505 Wurzbach Rd #102, San Antonio, TX 78238',
+        },
+        {
+            place: 'Leon Valley Cafe',
+            food: 'TexMex & American',
+            address: '6417 Evers Rd, Leon Valley, TX 78238',
+        }
+    ];
+    // console.log(eats[1].place);
+    // console.log(eats[1].food);
+    // console.log(eats[1].address);
 
-    geocode('6565 Babcock Rd Suite 19, San Antonio, TX 78249', mapBoxKey).then(function(result){
-        console.log(result);
+    // eats.forEach(function(eat){
+    //     console.log('Place: ' + eat.place + '\n'
+    //         + 'food: ' + eat.food + '\n' +
+    //     'address: ' + eat.address + '.')
+    // });
+
+    eats.forEach(function(eat){
+        geocode(eat.address, mapBoxKey).then(function(result){
+            let marker = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map)
+            let popup = new mapboxgl.Popup()
+            .setHTML('<h6>' + eat.place + '</h6>' +
+                '<h6>' + eat.food + '</h6>' +
+                '<h6>' + eat.address + '</h6>')
+            marker.setPopup(popup);
+        });
     });
-    let markerThree = new mapboxgl.Marker()
-    markerThree.setLngLat({lng: -98.614468, lat: 29.555787})
-    markerThree.addTo(map);
-    let popupThree = new mapboxgl.Popup();
-    popupThree.setHTML('<h6>Nama Ramen</h6>');
-    markerThree.setPopup(popupThree);
 
 </script>
 
