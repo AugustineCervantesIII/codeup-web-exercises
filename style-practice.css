@@ -1,0 +1,30 @@
+* {
+    color: white;
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+    background-image: url("img/brown-coffee-beans-1323730.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    margin: 20px;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    margin: 0;
+}
+
+/*h5 {*/
+/*    background-color: dimgrey;*/
+/*}*/
+
+#horz-rule {
+    margin: 0;
+}
+
+
