@@ -9,7 +9,7 @@
 <script>
 
     "use strict";
-    (function(){
+    (function () {
 
 // function eightCharactersLong(str){
 //         if (str.length >= 8) {
@@ -265,111 +265,111 @@
 // 1 Dynamically-typed languages
 //     are those (like JavaScript) where the interpreter
 //     assigns variables a type at runtime based on the variable's value at the time.
-    //like js, php, python, ruby
+        //like js, php, python, ruby
 
-    // 2 = is used to define a variable
-    // == is equel, compares two values
-    // (numbers, strings, or boolean)
-    // to see if they are the same.
-    //     === strict equel to, compares if the data type and values are the same
+        // 2 = is used to define a variable
+        // == is equel, compares two values
+        // (numbers, strings, or boolean)
+        // to see if they are the same.
+        //     === strict equel to, compares if the data type and values are the same
 
-    // 3 truthy are expressions that evaluate to the boolean true value
-    // and falsy to the false value
-    // truth and false are not limited to boolean data types
+        // 3 truthy are expressions that evaluate to the boolean true value
+        // and falsy to the false value
+        // truth and false are not limited to boolean data types
 
-    // 4 A parameter is a variable in a method definition.
-    //     When a method is called, the arguments are the
-    // data you pass into the method's parameters. ' +
-    // 'Parameter is variable in the declaration of function. ' +
-    // 'Argument is the actual value of this variable that gets passed to function.
+        // 4 A parameter is a variable in a method definition.
+        //     When a method is called, the arguments are the
+        // data you pass into the method's parameters. ' +
+        // 'Parameter is variable in the declaration of function. ' +
+        // 'Argument is the actual value of this variable that gets passed to function.
 
-    // 5 like the alert and prompt
-    // when the function is passed through another function to be called back
+        // 5 like the alert and prompt
+        // when the function is passed through another function to be called back
 
 
-    // 6 A higher-order function is a function that can take another function
-    // as an argument, or that returns a function as a result.
+        // 6 A higher-order function is a function that can take another function
+        // as an argument, or that returns a function as a result.
 
-    //y is undefined
-    // 7 let x = function() {
-    //     2 + 2;
-    // }
-    // let y = x();
+        //y is undefined
+        // 7 let x = function() {
+        //     2 + 2;
+        // }
+        // let y = x();
 
-    // 8 use strict helps prevent using undeclared variables
-    //
-    // 9 An IIFE (Immediately Invoked Function Expression)
-    // is a JavaScript function that runs as soon as it is defined.
-    //
-    //
-    // 10 A switch statement is usually more efficient or more readable than a set of nested ifs.
-    //
+        // 8 use strict helps prevent using undeclared variables
+        //
+        // 9 An IIFE (Immediately Invoked Function Expression)
+        // is a JavaScript function that runs as soon as it is defined.
+        //
+        //
+        // 10 A switch statement is usually more efficient or more readable than a set of nested ifs.
+        //
 
-    // 11 also more readable.
+        // 11 also more readable.
 // let favoriteShows = ['supernatural', 'theflash', 'whitecollar', 'westworld', 'rick&morty']
 // favoriteShows.forEach(function(favoriteShows, index){
 //     console.log(favoriteShows, index)
 // });
 
-    //write a function that prints the number 1 - 100
-    // For numbers divisible by 3, print “Fizz”
-    //For numbers divisible by 5, print “Buzz”
-    //For numbers divisible by both 3 and 5, print “FizzBuzz”
+        //write a function that prints the number 1 - 100
+        // For numbers divisible by 3, print “Fizz”
+        //For numbers divisible by 5, print “Buzz”
+        //For numbers divisible by both 3 and 5, print “FizzBuzz”
 
-    // for (let i = 1; i < 101; i++){
-    //     if(i % 15 === 0) console.log('fizzbuzz');
-    //     else if (i % 3 === 0) console.log('fizz');
-    //     else if (i % 5 === 0) console.log('buzz');
-    //     else console.log(i);
-    // }
-    //
-    // // another solution for this is
-    //
-    // for(let i = 0;i < 100;) console.log((++i % 3 ? '':'fizz')+( i % 5 ?'':'buzz') ||i)
+        // for (let i = 1; i < 101; i++){
+        //     if(i % 15 === 0) console.log('fizzbuzz');
+        //     else if (i % 3 === 0) console.log('fizz');
+        //     else if (i % 5 === 0) console.log('buzz');
+        //     else console.log(i);
+        // }
+        //
+        // // another solution for this is
+        //
+        // for(let i = 0;i < 100;) console.log((++i % 3 ? '':'fizz')+( i % 5 ?'':'buzz') ||i)
 
-    //and
-    // function fizzbuzz(){
-    //     for(let i = 1; i <= 100; i++){
-    //         if(i % 3 === 0 && i % 5 === 0){
-    //             console.log('fizzbuzz');
-    //         } else if (i % 3 === 0){
-    //             console.log('fizz');
-    //         }else if(i % 5 === 0){
-    //             console.log('buzz');
-    //         } else {
-    //             console.log(i);
-    //         }
-    //     }
-    // }
+        //and
+        // function fizzbuzz(){
+        //     for(let i = 1; i <= 100; i++){
+        //         if(i % 3 === 0 && i % 5 === 0){
+        //             console.log('fizzbuzz');
+        //         } else if (i % 3 === 0){
+        //             console.log('fizz');
+        //         }else if(i % 5 === 0){
+        //             console.log('buzz');
+        //         } else {
+        //             console.log(i);
+        //         }
+        //     }
+        // }
 
-    // Create a function that takes in a array input and returns true
-    // if one of the elements is a number that matches the number of total elements in the array.
-    // Example input: [1]
-    // Example output: true
+        // Create a function that takes in a array input and returns true
+        // if one of the elements is a number that matches the number of total elements in the array.
+        // Example input: [1]
+        // Example output: true
 
-    // Example input: ['bob', 3, false]
-    // Example output: true
+        // Example input: ['bob', 3, false]
+        // Example output: true
 
-    // Example input: [{'a': 'hello'}, 10, true]
-    // Example output: false
+        // Example input: [{'a': 'hello'}, 10, true]
+        // Example output: false
 
-    // Example input: [5, {'a': 'hello'}, 30, true, null]
-    // Example output: true
+        // Example input: [5, {'a': 'hello'}, 30, true, null]
+        // Example output: true
 
-    // function arrayLength(arr){
-    //     for(let i = 0; 1< arr.length; i++){
-    //         if(arr[i] === arr.length){
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
+        // function arrayLength(arr){
+        //     for(let i = 0; 1< arr.length; i++){
+        //         if(arr[i] === arr.length){
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }
 
-    //or
-    //     function arrayLength(arr){
-    //      return arr.includes(arr.length);
-    //     }
-    // console.log(arrayLength(['bob', 3, false]));
+        //or
+        //     function arrayLength(arr){
+        //      return arr.includes(arr.length);
+        //     }
+        // console.log(arrayLength(['bob', 3, false]));
 
 
         // Write a javascript function that takes in a number
@@ -377,15 +377,53 @@
         // If any argument is passed into the function that is
         // not a number, return false.
 
-    function fourthPower(num){
-        if(!isNaN(num)){
-            return num ** 4;
-        } else {
-            return false;
+        // function fourthPower(num){
+        //     if(!isNaN(num)){
+        //         return num ** 4;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+        // console.log(fourthPower(2));
+        // console.log(fourthPower('two'))
+
+// Write a function definition named firstAndLast
+// that takes in sequence and returns the first and
+// last value of that sequence as an array
+        function firstAndLast(seq) {
+            let newArr = []; //empty array
+            let seqShift = seq.shift(); //seqShift = seq.remove first element()
+            newArr.push(seqShift); //empty.add(removed first element)
+            seqShift = seq.pop();//removed first element = arr.removed last element from the array
+            newArr.push(seqShift);//empty.add element to the array(removed first element and last element)
+            return newArr;// return empty array
         }
-    }
-    console.log(fourthPower(2));
-    console.log(fourthPower('two'))
+
+        //.shift() removes the first element in the array and returns that element
+        //.pop() removes the last element from the array
+        //.push() adds one or more elements to an array and return the new length of the array
+        console.log(firstAndLast([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+        function firstToLast(seq) {
+            let arrShift = seq.shift();
+            seq.push(arrShift);
+            return seq;
+        }
+
+        console.log(firstToLast([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+function sumAll(seq){
+    let count = 0;
+    seq.forEach(function(num){
+       count += num++
+    });
+    return count;
+}
+        console.log(sumAll([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+
+
+
 
     })();
 </script>
