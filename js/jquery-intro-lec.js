@@ -56,12 +56,22 @@ $(document).ready(function() {
 // see example below
 
 "use strict";
+//using an iife in combination with jquery dom ready
+// (function($){
+// 	$(document).ready(function() {
+// 		alert('the dom has finished loading');
+// 	});
+// })(jQuery);
 
-$(document).ready(function() {
-	alert('the dom has finished loading');
 
-	// INSERT JAVASCRIPT CODE HERE
-	let headings = $('.main-headings');
-	console.log(headings);
+
+
+
+ $(document).ready(function() {
+// 	alert('the dom has finished loading');
+//
+// 	// INSERT JAVASCRIPT CODE HERE
+// 	let headings = $('.main-headings');
+// 	console.log(headings);
 
 });

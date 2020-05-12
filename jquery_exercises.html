@@ -5,15 +5,52 @@
     <title>jquery exercise</title>
 </head>
 <body>
-
+<h1 class="code-up" id="h-one-header">JQUERY EXERCISE</h1>
+<p class="p-1" id="paragraph">
+    This paragraph is inside the p tags.
+    ID Selector	#id	Selects a single element with the given id attribute.
+    Class Selector	.class	Selects all elements with the given class.
+    Element Selector	element	Selects all elements with the given tag name.
+    Multiple Selector	selector1[, selector2[, ...]]	Selects the combined results of all the specified selectors.
+    All Selector	*	Selects all elements.
+</p>
+<div>
+    <h1 class="code-up" id="list-header">Selector list</h1>
+</div>
+<ul id="selector-list" class="list-1">
+    <li id="selector-1">id selector #id</li>
+    <li id="selector-2">class selector .class</li>
+    <li id="selector-3">element selector element</li>
+    <li id="selector-4">multi selector selector1[, selector2[, ...]]</li>
+    <li id="selector-5">all selector *</li>
+</ul>
+<div>
+    <h4 class="code-up" id="final-h">This is the end of the content.</h4>
+</div>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-
 "use strict";
+$('#h-one-header').ready(function() {
 
-$(document).ready(function() {
-    alert( 'the dom has finished loading!' );
+$('h4').css('background-color', '#cdef0d')
+
+//multi select and highlight all h1, p, and li elements
+$('h1, p, li').css('background-color', '#74d274')
+
+//li font size changed to 20px
+$('li').css('font-size', '20px');
+
+//add border to all code-up classes
+$('.code-up').css('border', '5px solid blue');
+
+// alert on h1 id
+let title = $('#h-one-header').html();
+    alert(title + ' has loaded. Click ok to see some color on the page.');
+
+
+
+
 });
 </script>
 
