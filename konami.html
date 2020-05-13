@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Konami Code</title>
+    <style>
+        *, h1 {
+            font-family: 'Audiowide', cursive;
+        }
+
+        #Y {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Konami Code</h1>
+<div class="container d-flex justify-content-around p-5">
+<div id="leftSide">
+    <div id="up" class="buttons btn btn-secondary"><i class="fas fa-arrow-up"></i></div>
+    <div id="down" class="buttons btn btn-secondary"><i class="fas fa-arrow-down"></i></div>
+    <div id="left" class="button-left btn btn-secondary"><i class="fas fa-arrow-left"></i></div>
+    <div id="right" class="button-right btn btn-secondary"><i class="fas fa-arrow-right"></i></div>
+</div>
+    <div class="">
+        <div id="start" class="align-content-center badge badge-pill btn-dark">Start</div>
+    </div>
+<div id="rightSide">
+    <div id="A" class="btn btn-success">A</div>
+    <div id="B" class="btn btn-danger">B</div>
+    <div id="X" class="btn btn-primary">X</div>
+    <div id="Y" class="btn btn-warning">Y</div>
+</div>
+</div>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    //up arrow = 38
+    //down arrow = 40
+    //left arrow = 37
+    //right arrow = 39
+    //a = 65
+    //b = 66
+    //return/enter = 13
+
+    let konami = '38,38,40,40,37,39,37,39,66,65,13';
+    let code = [];
+
+    $(document).keyup(function(element){
+        code.push(element.keyCode);
+        if (code.toString().indexOf(konami) >= 0) {
+            $('body').css("background-image",'<img src="img/Contra.jpg"');
+            alert("You have added 30 lives!");
+        }
+    });
+
+    console.log(code)
+
+    $(document).keypress(function(element){
+        if(element.which === 13) {
+            $("#start").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 65) {
+            $("#A").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 66) {
+            $("#B").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 88) {
+            $("#X").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 89) {
+            $("#Y").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 39) {
+            $("#right").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 37) {
+            $("#left").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 40) {
+            $("#down").fadeOut(100).fadeIn(100);
+        }
+    });
+
+    $(document).keyup(function(element){
+        if(element.which === 38) {
+            $("#up").fadeOut(100).fadeIn(100);
+        }
+    });
+</script>
+<script src="https://kit.fontawesome.com/3963957e1d.js" crossorigin="anonymous"></script>
+</body>
+</html>
