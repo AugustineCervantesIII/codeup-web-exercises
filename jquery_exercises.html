@@ -31,6 +31,26 @@
 <script src="js/jquery-2.2.4.js"></script>
 <script>
 "use strict";
+
+$('h1').click(function(){
+    $(this).css({
+        'background-color': 'black',
+        'color': 'white'
+    })
+});
+
+$('p').dblclick(function(){
+    $(this).css({'font-size': '18px', 'background-color': 'red'})
+});
+
+
+$('li').hover(function(){
+    $(this).css('color', 'red');
+}, function(){
+    $(this).css('color', 'black');
+});
+
+
 $('#h-one-header').ready(function() {
 
 $('h4').css('background-color', '#cdef0d')
