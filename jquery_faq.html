@@ -86,6 +86,28 @@
         mammals in the United States, so your chances of
         spotting some are pretty good.</dd>
 </dl>
+<h3>San Antonio Missions</h3>
+<ul>
+    <li>After 10,000 years, the people of South Texas found their cultures, their very lives under attack.</li>
+    <li>In the early 1700s Apache raided from the north, deadly diseases traveled from Mexico, and drought lingered.</li>
+    <li>Survival lay in the missions.</li>
+    <li>By entering a mission, they foreswore their traditional life to become Spanish, accepting a new religion and pledging fealty to a distant and unseen king.</li>
+</ul>
+<h3>Death Valley</h3>
+<ul>
+    <li>In this below-sea-level basin, steady drought and record summer heat make Death Valley a land of extremes</li>
+    <li>Yet, each extreme has a striking contrast</li>
+    <li>Towering peaks are frosted with winter snow.</li>
+    <li>Rare rainstorms bring vast fields of wildflowers.</li>
+</ul>
+<h3>Olympic</h3>
+<ul>
+    <li>With its incredible range of precipitation and elevation, diversity is the hallmark of Olympic National Park.</li>
+    <li>Encompassing nearly a million acres,</li>
+    <li>he park protects a vast wilderness</li>
+    <li>thousands of years of human history,</li>
+</ul>
+<button id= button class="btn">click here to highlight last items only</button>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
@@ -98,6 +120,7 @@
     //     $(this).toggleClass('invisible');
     // });
 
+        //attribute and css
         $('dd').addClass('invisible');
 
         $('dt').click(function(){
@@ -106,6 +129,20 @@
 
 
 
+        //traversing
+        $('#button').click(function(){
+            $('ul').each(function(){
+                $(this).children().last().css('background-color', 'lightgreen');
+            });
+        });
+
+        $('h3').click(function(){
+            $('li').css('font-weight', 'bold')
+        });
+
+        $('li').click(function(){
+            $(this).parent().children().first().css('color', 'blue');
+        });
 
     });
 </script>
