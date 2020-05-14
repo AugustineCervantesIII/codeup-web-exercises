@@ -51,10 +51,18 @@
     $(document).keyup(function(element){
         code.push(element.keyCode);
         if (code.toString().indexOf(konami) >= 0) {
-            $('body').css("background-image",'<img src="img/Contra.jpg"');
+            $('body').css({"background-image": 'url("img/Contra.jpg")', 'color': 'white'});
             alert("You have added 30 lives!");
         }
     });
+
+    // $(document).keyup(function(element){
+    //     code.push(element.keyCode);
+    //     if (code.toString().indexOf(konami) >= 0) {
+    //         $('body').css({'background-color':'#5420b9', 'color': 'white'});
+    //         alert("You have added 30 lives!");
+    //     }
+    // });
 
     console.log(code)
 
