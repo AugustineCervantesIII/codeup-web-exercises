@@ -137,12 +137,15 @@
         });
 
         $('h3').click(function(){
-            $('li').css('font-weight', 'bold')
+            $(this).next().children().css('font-weight', 'bold')
         });
+
 
         $('li').click(function(){
             $(this).parent().children().first().css('color', 'blue');
         });
+
+
 
     });
 </script>
