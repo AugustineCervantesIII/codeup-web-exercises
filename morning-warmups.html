@@ -402,25 +402,40 @@
         //.shift() removes the first element in the array and returns that element
         //.pop() removes the last element from the array
         //.push() adds one or more elements to an array and return the new length of the array
-        console.log(firstAndLast([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+//         console.log(firstAndLast([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+//
+//         function firstToLast(seq) {
+//             let arrShift = seq.shift();
+//             seq.push(arrShift);
+//             return seq;
+//         }
+//
+//         console.log(firstToLast([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+//
+// function sumAll(seq){
+//     let count = 0;
+//     seq.forEach(function(num){
+//        count += num++
+//     });
+//     return count;
+// }
+//         console.log(sumAll([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+//
 
-        function firstToLast(seq) {
-            let arrShift = seq.shift();
-            seq.push(arrShift);
-            return seq;
-        }
+// Write a JavaScript function that takes in a string and returns
+// the number of words in the string (Numbers within a string
+// should be counted as a word). If the function is ever passed
+// an argument that is not a string, return the number 0.
 
-        console.log(firstToLast([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+    function numberOfWords(string){
+            if(typeof string === 'string'){
+                return string.split(' ').length;
+            } else {
+                return 0;
+            }
+    }
 
-function sumAll(seq){
-    let count = 0;
-    seq.forEach(function(num){
-       count += num++
-    });
-    return count;
-}
-        console.log(sumAll([1, 2, 3, 4, 5, 6, 7, 8, 9]))
-
+console.log(numberOfWords("Today's morning warm up 5/15/2020"));
 
 
 
