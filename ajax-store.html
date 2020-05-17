@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         body {
-            background-color: steelblue;
+            background-color: #007bff;
         }
 
         .container2 {
@@ -49,8 +49,7 @@
         "use strict";
         // TODO: Create an ajax GET request for /data/inventory.json
 
-        $.ajax("data/inventory.json")
-            .done(function(resp){
+        $.ajax("data/inventory.json").done(function(resp){
                console.log(resp);
             });
 
@@ -59,8 +58,7 @@
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
 
-        $.ajax("data/inventory.json")
-            .done(function(data){
+        $.ajax("data/inventory.json").done(function(data){
                 console.log(data);
                 for (let i = 0; i < data.length; i++){
                     $('#insertProducts').append('<tr>' +

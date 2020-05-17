@@ -390,14 +390,14 @@
 // Write a function definition named firstAndLast
 // that takes in sequence and returns the first and
 // last value of that sequence as an array
-        function firstAndLast(seq) {
-            let newArr = []; //empty array
-            let seqShift = seq.shift(); //seqShift = seq.remove first element()
-            newArr.push(seqShift); //empty.add(removed first element)
-            seqShift = seq.pop();//removed first element = arr.removed last element from the array
-            newArr.push(seqShift);//empty.add element to the array(removed first element and last element)
-            return newArr;// return empty array
-        }
+//         function firstAndLast(seq) {
+//             let newArr = []; //empty array
+//             let seqShift = seq.shift(); //seqShift = seq.remove first element()
+//             newArr.push(seqShift); //empty.add(removed first element)
+//             seqShift = seq.pop();//removed first element = arr.removed last element from the array
+//             newArr.push(seqShift);//empty.add element to the array(removed first element and last element)
+//             return newArr;// return empty array
+//         }
 
         //.shift() removes the first element in the array and returns that element
         //.pop() removes the last element from the array
@@ -427,15 +427,32 @@
 // should be counted as a word). If the function is ever passed
 // an argument that is not a string, return the number 0.
 
-    function numberOfWords(string){
-            if(typeof string === 'string'){
-                return string.split(' ').length;
-            } else {
-                return 0;
-            }
-    }
+//     function numberOfWords(string){
+//             if(typeof string === 'string'){
+//                 return string.split(' ').length;
+//             } else {
+//                 return 0;
+//             }
+//     }
+//
+// console.log(numberOfWords("Today's morning warm up 5/15/2020"));
 
-console.log(numberOfWords("Today's morning warm up 5/15/2020"));
+//promise is good for asynchronous programming
+//         let promise = new Promise((resolve, reject) => {
+//             if (true) {
+//                 resolve('stuff worked');
+//             } else {
+//                 reject('error, it broke')
+//             }
+//         });
+//         promise.then(result => console.log(result));
+//         promise
+//             .then(result => result + '!')
+//             .then(result2 => {
+//                 throw Error
+//                 console.log(result2);
+//             })
+//         .catch(() => console.log('error!'));
 
 
 
