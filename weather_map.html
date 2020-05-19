@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    <script src="css/weather_map.css"></script>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <title>Weather App</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-primary text-light justify-content-around">
+    <!-- Navbar content -->
+    <h4 class="name">Weather App</h4>
+    <h4 class="city-name">Current City:<span id="my-city"></span></h4>
+</nav>
+<nav class="navbar-place navbar-light bg-light">
+    <form class="form-inline">
+        <h4>Place</h4>
+        <input class="form-control mr-sm-2" type="search" placeholder="find a place" aria-label="Search">
+        <button class="btn tn btn-primary my-2 my-sm-0" type="submit">Find</button>
+    </form>
+</nav>
+<div class="row flex-nowrap justify-content-around">
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-header"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item temp">Temperature:</li>
+            <li class="list-group-item description">description:</li>
+            <li class="list-group-item humidity">humidity:</li>
+            <li class="list-group-item wind">wind:</li>
+            <li class="list-group-item pressure">pressure:</li>
+        </ul>
+    </div>
+
+<!--    <div class="card" style="width: 18rem;">-->
+<!--        <div class="card-header"></div>-->
+<!--        <ul class="list-group list-group-flush">-->
+<!--            <li class="list-group-item">temp</li>-->
+<!--            <li class="list-group-item">description</li>-->
+<!--            <li class="list-group-item">humidity</li>-->
+<!--            <li class="list-group-item">wind</li>-->
+<!--            <li class="list-group-item">pressure</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--    <div class="card" style="width: 18rem;">-->
+<!--        <div class="card-header"></div>-->
+<!--        <ul class="list-group list-group-flush">-->
+<!--            <li class="list-group-item">temp</li>-->
+<!--            <li class="list-group-item">description</li>-->
+<!--            <li class="list-group-item">humidity</li>-->
+<!--            <li class="list-group-item">wind</li>-->
+<!--            <li class="list-group-item">pressure</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--    <div class="card" style="width: 18rem;">-->
+<!--        <div class="card-header"></div>-->
+<!--        <ul class="list-group list-group-flush">-->
+<!--            <li class="list-group-item">temp</li>-->
+<!--            <li class="list-group-item">description</li>-->
+<!--            <li class="list-group-item">humidity</li>-->
+<!--            <li class="list-group-item">wind</li>-->
+<!--            <li class="list-group-item">pressure</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+<!--    <div class="card" style="width: 18rem;">-->
+<!--        <div class="card-header"></div>-->
+<!--        <ul class="list-group list-group-flush">-->
+<!--            <li class="list-group-item">temp</li>-->
+<!--            <li class="list-group-item">description</li>-->
+<!--            <li class="list-group-item">humidity</li>-->
+<!--            <li class="list-group-item">wind</li>-->
+<!--            <li class="list-group-item">pressure</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+</div>
+
+<!--map and size-->
+<div id='map' style='width: 100%; height: 60vh;'></div>
+
+<!-- need
+ jquery›
+ mapbox key
+ weather map key
+ -->
+<script src="js/jquery-2.2.4.js"></script>
+<script src="js/keys.js"></script>
+<script src="js/weather_map.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

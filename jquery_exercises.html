@@ -8,11 +8,11 @@
 <h1 class="code-up" id="h-one-header">JQUERY EXERCISE</h1>
 <p class="p-1" id="paragraph">
     This paragraph is inside the p tags.
-    ID Selector	#id	Selects a single element with the given id attribute.
-    Class Selector	.class	Selects all elements with the given class.
-    Element Selector	element	Selects all elements with the given tag name.
-    Multiple Selector	selector1[, selector2[, ...]]	Selects the combined results of all the specified selectors.
-    All Selector	*	Selects all elements.
+    ID Selector #id Selects a single element with the given id attribute.
+    Class Selector .class Selects all elements with the given class.
+    Element Selector element Selects all elements with the given tag name.
+    Multiple Selector selector1[, selector2[, ...]] Selects the combined results of all the specified selectors.
+    All Selector * Selects all elements.
 </p>
 <div>
     <h1 class="code-up" id="list-header">Selector list</h1>
@@ -30,47 +30,45 @@
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-"use strict";
+    "use strict";
 
-$('h1').click(function(){
-    $(this).css({
-        'background-color': 'black',
-        'color': 'white'
-    })
-});
+    $('h1').click(function () {
+        $(this).css({
+            'background-color': 'black',
+            'color': 'white'
+        })
+    });
 
-$('p').dblclick(function(){
-    $(this).css({'font-size': '18px', 'background-color': 'red'})
-});
+    $('p').dblclick(function () {
+        $(this).css({'font-size': '18px', 'background-color': 'red'})
+    });
 
-$('li').hover(function(){
-    $(this).css('color', 'red');
-}, function(){
-    $(this).css('color', 'black');
-});
+    $('li').hover(function () {
+        $(this).css('color', 'red');
+    }, function () {
+        $(this).css('color', 'black');
+    });
 
 
-$('#h-one-header').ready(function() {
+    $('#h-one-header').ready(function () {
 
-$('h4').css('background-color', '#cdef0d')
+        $('h4').css('background-color', '#cdef0d')
 
 //multi select and highlight all h1, p, and li elements
-$('h1, p, li').css('background-color', '#74d274')
+        $('h1, p, li').css('background-color', '#74d274')
 
 //li font size changed to 20px
-$('li').css('font-size', '20px');
+        $('li').css('font-size', '20px');
 
 //add border to all code-up classes
-$('.code-up').css('border', '5px solid blue');
+        $('.code-up').css('border', '5px solid blue');
 
 // alert on h1 id
-let title = $('#h-one-header').html();
-    alert(title + ' has loaded. Click ok to see some color on the page.');
+        let title = $('#h-one-header').html();
+        alert(title + ' has loaded. Click ok to see some color on the page.');
 
 
-
-
-});
+    });
 </script>
 
 </body>
