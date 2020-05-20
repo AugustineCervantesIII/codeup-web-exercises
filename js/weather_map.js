@@ -12,23 +12,16 @@ let weatherOptions = {
 
 $.get(weatherUrl, weatherOptions).done(function (data) {
     console.log(data)
-    let todayDate = new Date(data.daily[0].dt * 1000).toLocaleDateString();
-
-    $('.card-header').append(todayDate);
-    $('.temp').append(' ' + data.daily[0].temp.day);
-    $('.description').append(' ' + data.daily[0].weather[0].description);
-    $('.humidity').append(' ' + data.daily[0].humidity);
-    $('.wind').append(' ' + data.daily[0].wind_speed);
-    $('.pressure').append(' ' + data.daily[0].pressure);
-    //console.log(todayDate); // full date description
-   // console.log(todayDate.toLocaleDateString()); // display the unix timestamp as a human readable date
-    //[0] for today date
-    //[1] for tomorrow
-    console.log(data.daily[0].temp.day);
-    console.log(data.daily[0].weather[0].description);
-    console.log(data.daily[0].humidity)
-    console.log(data.daily[0].wind_speed);
-    console.log(data.daily[0].pressure);
+    for(let i = 0; i <= 5; i++) {
+        let todayDate = new Date(data.daily[i].dt * 1000).toLocaleDateString();
+        let weather = '<h5>' + todayDate + '</h5>' +
+            '<p>' + 'Temperature: ' + data.daily[i].temp.day + '</p>' +
+            '<p>' + 'Description: ' + data.daily[i].weather[0].description + '</p>' +
+            '<p>' + 'Humidity: ' + data.daily[i].humidity + '</p>' +
+            '<p>' + 'Wind: ' + data.daily[i].wind_speed + '</p>' +
+            '<p>' + 'Pressure: ' + data.daily[i].pressure + '</p>';
+        $('.weather').append(weather);
+    }
 });
 
 
@@ -39,6 +32,48 @@ let map = new mapboxgl.Map({
     zoom: 9.5,
     center: [-98.4936, 29.4241]
 });
+
+let geocoder = new MapboxGeocoder({ // Initialize the geocoder
+    accessToken: mapboxgl.accessToken, // Set the access token
+    mapboxgl: mapboxgl, // Set the mapbox-gl instance
+    marker: false, // Do not use the default marker style
+});
+
+// Add the geocoder to the map
+map.addControl(geocoder);
+
+let marker = new mapboxgl.Marker() // initialize a new marker
+    .setLngLat([-98.4936, 29.4241]) // Marker [lng, lat] coordinates
+    .addTo(map); // Add the marker to the map
+
+
+
+$('.mapbox-ctrl-geocoder--icon-search').click(function(event) {
+    let searchInput = $('.mapbox-ctrl-geocoder--input').val();
+    geocode(searchInput, MAPBOX_KEY).then(function (result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(20);
+        marker.setLngLat(result).addTo(map);
+        console.log(result);
+    });
+})
+    // geocode(searchInput, MAPBOX_KEY);
+// });
+
+    // function geocode(search, token) {
+    //     let baseUrl = 'https://api.mapbox.com';
+    //     let endPoint = '/geocoding/v5/mapbox.places/';
+    //     return fetch(baseUrl + endPoint + encodeURIComponent(search)
+    //         + '.json' + "?" + 'access_token=' + token)
+    //         .then(function (res) {
+    //             return res.json();
+    //             // to get all the data from the request, comment out the following three lines...
+    //         }).then(function (data) {
+    //             console.log(data.features)
+    //            return data.features[0].center;
+    //         });
+    // }
 
 
 //As you complete each step, commit your changes and push them to GitHub.
