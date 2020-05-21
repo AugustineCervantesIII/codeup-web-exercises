@@ -69,8 +69,6 @@ let marker = new mapboxgl.Marker({
 // after you click a from search results it will take the result long and latitude
 // and will plug into the getWeather method which will display the new weather results for
 // that result location and add a draggable marker
-
-
 geocoder.on('result', function (event){
     // what date am I receiving back ?
 console.log(event);
@@ -80,7 +78,7 @@ console.log(event);
     getWeather(weatherUrl, weatherOptions);
     marker.setLngLat([event.result.center[0], event.result.center[1]]) // Marker [lng, lat] coordinates
     .addTo(map);
-
+});
 
 marker.on('dragend', function () {
     let lngLat = marker.getLngLat();
@@ -89,6 +87,4 @@ marker.on('dragend', function () {
     weatherOptions.lat = lngLat.lat;
 
     getWeather(weatherUrl, weatherOptions);
-});
-
 });
