@@ -8,7 +8,7 @@ body {
     font-family: 'Baloo 2', cursive;
     background-color: black;
     color: ghostwhite;
-    background-image: url("img/brown-coffee-beans-1323730.jpg");
+    background-image: url("../img/brown-coffee-beans-1323730.jpg");
     background-position: center;
     background-size: cover;
 }
