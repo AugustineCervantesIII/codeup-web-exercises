@@ -2,21 +2,40 @@
 
 //WALKTHROUGH
 function wait(seconds){
-    seconds = seconds * 1000;
     return new Promise(resolve => {
-
+        setTimeout(resolve,seconds)
     });
 }
+wait(1000).then(() => console.log("You'll see this after 1 second"));
+wait(2000).then(() => console.log("You'll see this after 2 seconds"));
+wait(3000).then(() => console.log("You'll see this after 3 seconds"));
 
-const wait = (num) => {
-    return new Promise((resolve, reject) => {
+
+function waitVersionTwo(seconds){
+    seconds = seconds * 1000;
+    return new Promise(resolve => {
         setTimeout(() => {
-            resolve();
-        }, num)
-    })
+            if(seconds > 1000){
+                console.log("You'll see this after " + seconds/1000 + " seconds.")
+            }else{
+                console.log("You'll see this after " + seconds/1000 + " second.")
+            }
+        },seconds)
+    });
 }
-wait(1000).then(() => console.log('You\'ll see this after 1 second'));
-wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
+waitVersionTwo(1);
+waitVersionTwo(5);
+
+// const wait = (num) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve();
+//         }, num)
+//     })
+// }
+//  wait(1000).then(() => console.log('You\'ll see this after 1 second'));
+//  wait(2000).then(() => console.log('You\'ll see this after 2 second'));
+//  wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 
 
 //unsuccessful
@@ -27,18 +46,19 @@ wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 //         .then(event => event.created_at)
 //         .then(date => console.log(date));
 // }
-// commits("Augustine.CervantesIII")
+// commits("AugustineCervantesIII")
 
 //walkthrough
 function getLastCommitDate(username){
-    return fetch('https://api.github.com/users/${username}/events', {
-        headers: {'Authorization': 'token ${GITHUB_API_KEY}'}
+    return fetch(`https://api.github.com/users/${username}/events`, {
+        headers: {'Authorization': `token ${GITHUB_API_KEY}`}
     }).then(response => response.json())
-        //we want to filter through push events only
+        // we want to filter through PushEvents only
         .then(events => {
-            return events.filter(event => event.type === 'PushEvent')[0].created_at;
+            return events.filter(event => event.type === "PushEvent")[0].created_at;
         });
 }
-getLastCommitDate('AugustineCervantes').then(date => {
+
+getLastCommitDate('AugustineCervantesIII').then(date => {
     console.log(new Date(date).toDateString());
 });
