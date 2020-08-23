@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/3963957e1d.js" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            let divs = document.querySelectorAll(".icons div");
+            divs.forEach(function (div, index) {
+                div.style.animation = 'topToBottom is cubic-bezier(0.51, 0.92, 0.24, 1.15)forwards ${' +
+                    index / 7 + 0.3 +
+                    '}s';
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <title>demo animation</title>
+    <style>
+        .icons {
+            display: flex;
+        }
+
+        .icons div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.404);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .icons div + div {
+            margin-left: 1rem;
+        }
+
+        .icons div i {
+            color: #000;
+            font-size: 13px;
+        }
+
+        @keyframes topToBottom {
+            from {
+                transform: translateY(-65px);
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="icons">
+    <div>
+        <a href=""><i class="fa fa-facebook"></i></a>
+    </div>
+    <div>
+        <a href=""><i class="fa fa-dribble"></i></a>
+    </div>
+    <div>
+        <a href=""><i class="fa fa-twitter"></i></a>
+    </div>
+    <div>
+        <a href=""><i class="fa fa-behance"></i></a>
+    </div>
+</div>
+</body>
+</html>
